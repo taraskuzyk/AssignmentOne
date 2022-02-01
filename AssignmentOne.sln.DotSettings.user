@@ -1,0 +1,19 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=23a409cc_002Dc92f_002D48bc_002Dbf6d_002Df7e0a64c45ee/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestGetMatrix" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::A8601DAE-AC4A-2841-A7AE-F7B34DEB71A9::.NETFramework,Version=v4.7.1::TestEegDataReader.TestGetMatrix&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=96d06252_002D6494_002D4d92_002Da85d_002Dc86c74307340/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestParseLine" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::A8601DAE-AC4A-2841-A7AE-F7B34DEB71A9::.NETFramework,Version=v4.7.1::TestEegDataReader.TestParseLineWithOutNumbers&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::A8601DAE-AC4A-2841-A7AE-F7B34DEB71A9::.NETFramework,Version=v4.7.1::TestEegDataReader.TestGetMatrix&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d392a448_002Ddb22_002D4ad3_002Db054_002Df35ef82e1e11/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestMovableObject" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::08B6F75D-DE3B-9CBA-8BD6-B09368459245::.NETFramework,Version=v4.7.1::TestMovableObject&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::A8601DAE-AC4A-2841-A7AE-F7B34DEB71A9::.NETFramework,Version=v4.7.1::TestEegDataReader.TestReadFileLines&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
