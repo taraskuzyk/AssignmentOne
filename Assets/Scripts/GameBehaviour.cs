@@ -1,19 +1,24 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using UnityEngine;
 
 public class GameBehaviour : MonoBehaviour
 {
+    private const string InputFileName = "epochs.txt";
+    private const string OutputFileName = "xyz.txt";
     private Cube _cube;
     private Sphere _sphere;
     private EegData _eegData;
+    private string _rootDirectory;
     void Start()
     {
         InitialCubeAndSphere();
-        var eegDataReader = new EegDataReader("epochs.txt");
+        var eegDataReader = new EegDataReader(InputFileName);
         _eegData = new EegData(eegDataReader.GetMatrix());
+        _rootDirectory = eegDataReader.GetProjectRootDirectory();
     }
 
     private void InitialCubeAndSphere()
@@ -51,12 +56,23 @@ public class GameBehaviour : MonoBehaviour
     private Vector3 GetEegCoordinates()
     {
         const double factor = 10;
-        var x = (float) (_eegData.GetDataByChannelNumber(channelNumber: 1).Average() * factor);
-        var y = (float) (_eegData.GetDataByChannelNumber(channelNumber: 2).Average() * factor);
-        var z = (float) (_eegData.GetDataByChannelNumber(channelNumber: 3).Average() * factor);
-        return new Vector3(x, y, z);
+        var x = _eegData.GetDataByChannelNumber(channelNumber: 1).Average();
+        var y = _eegData.GetDataByChannelNumber(channelNumber: 2).Average();
+        var z = _eegData.GetDataByChannelNumber(channelNumber: 3).Average();
+        
+        SaveXYZ(x, y, z);
+        return new Vector3((float)(x * factor),(float) (y*factor), (float) (z*factor));
     }
 
+    private void SaveXYZ(double x, double y, double z)
+    {
+        var outputFilePath = Path.Combine(_rootDirectory, "Assets", "Files", OutputFileName);
+        using (StreamWriter outputFile = new StreamWriter(outputFilePath))
+        {
+            outputFile.WriteLine($"{x} {y} {z}");
+        }
+        
+    }
 }
 
 public class EegData

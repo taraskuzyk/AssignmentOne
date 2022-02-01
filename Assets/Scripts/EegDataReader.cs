@@ -18,7 +18,7 @@ public class EegDataReader
         _filePath = Path.Combine(rootDirectory, AssetsRelativeDirectory, FilesRelativeDirectory, fileName);
     }
 
-    private static string GetProjectRootDirectory()
+    public string GetProjectRootDirectory()
     {
         var rootDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase);
         rootDirectory = rootDirectory.Replace("\\Library\\ScriptAssemblies", "");

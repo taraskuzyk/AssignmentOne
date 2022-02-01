@@ -3,7 +3,7 @@ using System.IO;
 using System;
 
 
-public class NewBehaviourScript : MonoBehaviour
+public class NewBehaviourScriptLegacy : MonoBehaviour
 {
     //Global Variables
     public string filepath1;
